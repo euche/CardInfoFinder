@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Presentation.MainActivity">
+
+    <TextView
+        android:id="@+id/card_info_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/card_info_header_height"
+        android:layout_marginStart="@dimen/card_info_header_marginstart"
+        android:layout_marginTop="@dimen/card_info_header_margintop"
+        android:text="@string/CardInfoFinder"
+        android:textColor="@color/custom_color_3"
+
+        android:textSize="@dimen/card_info_header_text_size"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/card_instruction_desc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_info_header_marginstart"
+        android:layout_marginTop="@dimen/card_number_textview_margintop"
+        android:text="@string/card_number_instruction"
+        android:textSize="@dimen/card_number_textview_textsize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_info_header_text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_input_background"
+        android:layout_marginStart="@dimen/card_info_header_marginstart"
+        android:layout_marginTop="@dimen/card_info_header_height"
+        android:layout_marginEnd="@dimen/card_info_header_marginstart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_instruction_desc_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/card_number_hint"
+            android:id="@+id/card_number_input"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submit_cardnumber_action_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_info_header_marginstart"
+        android:layout_marginTop="@dimen/card_info_header_marginstart"
+        android:layout_marginEnd="@dimen/card_info_header_marginstart"
+        android:text="@string/submit_button_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_background" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
